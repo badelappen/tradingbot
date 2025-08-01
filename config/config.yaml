@@ -1,0 +1,28 @@
+# Sample configuration for the trading bot. Replace the API keys with your
+# actual Binance API credentials. The risk management parameters and
+# strategy settings can be tuned to suit your requirements.
+
+api_key: "YOUR_BINANCE_API_KEY"
+api_secret: "YOUR_BINANCE_API_SECRET"
+
+# Trading symbol and interval
+symbol: "BTCUSDT"
+interval: "1m"
+
+# Amount of base asset to trade per order (for example BTC in BTCUSDT)
+base_asset_amount: 0.001
+
+risk:
+  # Maximum fraction of available balance to use per trade
+  max_position_size: 0.1
+  # Stop loss level as fraction of entry price (2% by default)
+  stop_loss_pct: 0.02
+  # Take profit level as fraction of entry price (3% by default)
+  take_profit_pct: 0.03
+
+strategy:
+  # Type of strategy (currently only 'sma' is implemented)
+  type: "sma"
+  # Short and long moving average windows
+  short_window: 7
+  long_window: 25
